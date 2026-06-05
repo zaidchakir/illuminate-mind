@@ -1,0 +1,6 @@
+# Local reference screenshots (kept locally, not needed in the deployed site)
+reference/*.png
+# OS / tooling cruft
+Thumbs.db
+.DS_Store
+__pycache__/
