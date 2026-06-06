@@ -1,5 +1,8 @@
 # Local reference screenshots (kept locally, not needed in the deployed site)
 reference/*.png
+# CRO research notes & render artifacts (kept local, not for the public repo)
+cro-research/
+out/
 # OS / tooling cruft
 Thumbs.db
 .DS_Store

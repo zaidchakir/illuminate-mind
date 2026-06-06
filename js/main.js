@@ -69,7 +69,7 @@
       e.preventDefault();
       if (count) { count.textContent = String((parseInt(count.textContent, 10) || 0) + 1); }
       btn.textContent = "Added ✓";
-      setTimeout(function () { btn.textContent = "Shop Now"; }, 1400);
+      setTimeout(function () { btn.textContent = "Add to Cart"; }, 1400);
     });
   });
 

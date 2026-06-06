@@ -347,3 +347,69 @@ button{font-family:inherit}
   *{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto}
   .announce__track{animation:none;justify-content:center}
 }
+
+/* ============================================================
+   CRO PASS ADDITIONS (2026-06) — a11y + new sections
+   ============================================================ */
+
+/* Visually-hidden (form labels, table head) */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Focus-visible rings (keyboard) — green on light, cream on dark sections */
+:where(a,button,input,summary,[tabindex]):focus-visible{outline:2px solid var(--green-d);outline-offset:2px;border-radius:4px}
+.announce :focus-visible,.trust :focus-visible,.purity :focus-visible,.testi :focus-visible,.guarantee :focus-visible,.join :focus-visible,.site-footer :focus-visible{outline-color:var(--cream-2)}
+
+/* Hero assurance line under the CTA */
+.hero__assure{display:flex;align-items:center;gap:7px;margin:16px 0 0;font-size:13.5px;color:var(--muted)}
+.hero__assure svg{width:16px;height:16px;flex:0 0 auto;fill:none;stroke:var(--sage-d);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+/* Product-card rating + count */
+.pcard__rating{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.rcount{color:rgba(255,255,255,.82);font-size:12.5px;letter-spacing:.02em}
+
+/* Inline "view lab results" link */
+.inline-link{color:var(--green);font-weight:500;border-bottom:1px solid var(--gold);white-space:nowrap}
+.inline-link:hover{color:var(--gold)}
+
+/* Problem -> solution */
+.problem{background:var(--cream)}
+.problem__grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.problem__col{border-radius:var(--radius);padding:32px 30px}
+.problem__col--pain{background:var(--cream-2);border:1px solid var(--line)}
+.problem__col--fix{background:linear-gradient(155deg,#33502f,#1f3322);color:#fff;display:flex;flex-direction:column;align-items:flex-start}
+.problem__eyebrow{font-family:var(--sans);font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--gold);display:block;margin-bottom:16px}
+.problem__col--fix .problem__eyebrow{color:var(--gold-lt)}
+.problem__col--pain ul{display:flex;flex-direction:column;gap:13px}
+.problem__col--pain li{position:relative;padding-left:30px;color:var(--ink);font-size:15.5px}
+.problem__col--pain li::before{content:"✕";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:rgba(156,59,50,.12);color:#9c3b32;font-size:11px;display:flex;align-items:center;justify-content:center}
+.problem__col--fix p{color:rgba(255,255,255,.9);font-size:15.5px;margin:0 0 22px}
+.problem__col--fix .btn{margin-top:auto;background:#fff;color:var(--green);border-color:#fff}
+.problem__col--fix .btn:hover{background:transparent;color:#fff}
+
+/* Comparison table */
+.compare{background:var(--cream-2)}
+.compare__wrap{margin-top:40px;overflow-x:auto}
+.compare__table{width:100%;border-collapse:collapse;min-width:520px;font-size:15px}
+.compare__table th,.compare__table td{padding:15px 14px;text-align:center;border-bottom:1px solid var(--line)}
+.compare__table thead th{font-family:var(--serif);font-weight:600;color:var(--green);font-size:16px}
+.compare__table tbody th{text-align:left;font-family:var(--sans);font-weight:400;color:var(--ink);font-size:14.5px}
+.compare__table .compare__us{background:rgba(42,66,51,.06);font-weight:600;color:var(--green)}
+.compare__table .yes{color:#2f6b3d;font-weight:600;font-size:17px}
+.compare__table .no{color:#b24a3f;font-size:16px}
+.compare__table .mb{color:var(--muted)}
+.compare__note{margin:16px 0 0;text-align:center;font-size:12.5px;color:var(--muted)}
+
+/* Final CTA */
+.final-cta{background:radial-gradient(120% 90% at 50% 0%,#EFE7D6,transparent 60%),var(--cream)}
+.final-cta__inner{text-align:center;padding:74px 0;display:flex;flex-direction:column;align-items:center}
+.final-cta__inner p{color:var(--muted);max-width:520px;margin:10px 0 22px;font-size:16px}
+.final-cta__assure{margin-top:14px;font-size:13px;color:var(--muted)}
+
+/* Footer FDA/DSHEA disclaimer */
+.footer__disclaimer{border-top:1px solid rgba(255,255,255,.15)}
+.footer__disclaimer .container{padding-block:16px;font-size:11.5px;line-height:1.5;color:rgba(255,255,255,.6);text-align:center}
+
+@media (max-width:760px){
+  .problem__grid{grid-template-columns:1fr}
+  .final-cta__inner{padding:56px 0}
+}
